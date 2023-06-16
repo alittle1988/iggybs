@@ -11,6 +11,10 @@ const Header = () => {
     window.scrollTo(0, 0)
   }
 
+  function hotsauce() {
+    alert("Hot sauce so hot it will make your butthole swell!")
+  }
+
   return (<>
     
       <Navbar className="header fixed-top" bg="light" expand="lg">
@@ -31,7 +35,7 @@ const Header = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Item className="navLinkDropItem" href="#CakePops">Cake Pops</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item className="navLinkDropItem" href="#action/3.4">
+                <NavDropdown.Item onClick={hotsauce} className="navLinkDropItem" href="#action/3.4">
                   Hot Sauce
                 </NavDropdown.Item>
               </NavDropdown>
