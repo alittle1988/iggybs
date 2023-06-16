@@ -4,11 +4,15 @@ import { Col, Container, Row } from "react-bootstrap";
 function Welcome() {
   return (
     <div>
-      <Container className="m-auto pt-5">
-        <Row className="welcomeRow">
-          <Col className="p-3">
-            <h2>Welcome to Iggy B's Bakery & Eats</h2>
-            <p>
+      <Container fluid className="pt-5 welcome">
+        <Row>
+          <h1 className="text-center mb-5 welcomeTitle">
+            Welcome to Iggy B's Bakery & Eats
+          </h1>
+        </Row>
+        <Row className="welcomeRow ms-4">
+          <Col className="p-3 mt-4">
+            <p className="text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -25,8 +29,11 @@ function Welcome() {
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </Col>
-          <Col className="p-3">
-            <img className="famPic" src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/319621034_10228117091368497_2106118885199984573_n.jpg?stp=c0.119.1440.1440a_dst-jpg_s552x414&_nc_cat=102&ccb=1-7&_nc_sid=da31f3&_nc_ohc=FzhPuO11s6EAX9tWkd4&_nc_ht=scontent-lax3-1.xx&oh=00_AfDaTVCad9Ps9--Tq3R9KQm1A29_xu7kOAvKenBB-jJ4hg&oe=64548040" alt="Family"/>
+          <Col
+            className="p-3 text-center d-none d-md-block d-lg-block d-xl-block "
+            md={6}
+          >
+            <img className="famPic" src="" alt="Family" />
           </Col>
         </Row>
       </Container>
