@@ -29,6 +29,7 @@ function App() {
         },
       ],
     },
+    
     {
       category: "Cakes",
       name: "Vanilla Cake",
@@ -51,7 +52,7 @@ function App() {
     },
     {
       category: "Cakes",
-      name: "Chocolate and Vanilla Cake",
+      name: "Chocolate/Vanilla Cake",
       description: "smooth, sweet, and just to die for",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrJ7xOymtpieFRqnjkSAnXC9XL5zluYMputg&usqp=CAU",
       sizeAvail: [

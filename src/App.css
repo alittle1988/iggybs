@@ -79,8 +79,24 @@ html {
   padding: 15px;
   list-style: none;
 
+
 }
 
-.itemPriceList {
+.imgDiv {
+  text-align: center;
+  width: 200px;
+}
 
+.itemimg {
+  border-radius: 50%;
+  text-align: center;
+  height: 175px;
+  width: 175px;
+}
+
+.itemP {
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  
 }

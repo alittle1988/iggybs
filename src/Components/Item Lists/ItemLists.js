@@ -1,5 +1,5 @@
 import React from "react";
-import Items from "./Items";
+import Items2 from "./Items2.js";
 import { Container } from "react-bootstrap";
 
 function ItemLists(props) {
@@ -12,7 +12,7 @@ function ItemLists(props) {
         <div className="itemdiv">
           {products.map((product, key) => {
             if (product.category.toLowerCase() === category.toLowerCase()) {
-              return <Items key={key} item={product} />;
+              return <Items2 key={key} item={product} />;
             }
           })}
         </div>
