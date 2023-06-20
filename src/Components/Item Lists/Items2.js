@@ -1,15 +1,35 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container, Row } from 'react-bootstrap'
 
+
 function Items2(props) {
-    const {item} = props
+  const [isOpen, setIsOpen] = useState(false);
+  const {item} = props
+
+
+  function handleIsOpenClick() {
+    setIsOpen(true);
+    
+  }
+
+  function handleIsClosedClick() {
+    setIsOpen(false)
+  }
+  console.log(item)
+    
   return (
     <Container>
         <Row>
-            <div className='imgDiv'>
+          {!isOpen ?
+            <div className='imgDiv' onClick={handleIsOpenClick}>
                <img className='itemimg' src={item.img}  alt={item.name} />
                <p className='itemP'>{item.name}</p>
-            </div>
+            </div> : ""}
+            {isOpen ? 
+              <div className='popUpcontainer'>
+                <p onClick={handleIsClosedClick}>X</p>
+              </div>: ""
+          }
            
         </Row>
 

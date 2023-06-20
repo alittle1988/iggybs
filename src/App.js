@@ -70,6 +70,7 @@ function App() {
         },
       ],
     },
+    
     {
       category: "CakePops",
       name: "Vanilla Cake Pops",
