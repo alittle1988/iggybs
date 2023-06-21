@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Card, Container, ListGroup, Row } from "react-bootstrap";
+import React from "react";
+import { Container, Row } from "react-bootstrap";
 
 function Items2(props) {
   const { item, onHandleShowDetails } = props;

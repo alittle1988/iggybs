@@ -144,6 +144,7 @@ html {
 .cardText {
   padding-left: 10px;
   margin-bottom: 0;
+  overflow: scroll;
 }
 
 .cardText1 {
