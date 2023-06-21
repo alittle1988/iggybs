@@ -1,40 +1,24 @@
-import React, {useState} from 'react'
-import { Container, Row } from 'react-bootstrap'
-
+import React, { useState } from "react";
+import { Card, Container, ListGroup, Row } from "react-bootstrap";
 
 function Items2(props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const {item} = props
+  const { item, onHandleShowDetails } = props;
 
-
-  function handleIsOpenClick() {
-    setIsOpen(true);
-    
+  function handleClick(detail) {
+    console.log(detail);
+    onHandleShowDetails(detail);
   }
 
-  function handleIsClosedClick() {
-    setIsOpen(false)
-  }
-  console.log(item)
-    
   return (
     <Container>
-        <Row>
-          {!isOpen ?
-            <div className='imgDiv' onClick={handleIsOpenClick}>
-               <img className='itemimg' src={item.img}  alt={item.name} />
-               <p className='itemP'>{item.name}</p>
-            </div> : ""}
-            {isOpen ? 
-              <div className='popUpcontainer'>
-                <p onClick={handleIsClosedClick}>X</p>
-              </div>: ""
-          }
-           
-        </Row>
-
+      <Row>
+        <div className="imgDiv" onClick={() => handleClick(item)}>
+          <img className="itemimg" src={item.img} alt={item.name} />
+          <p className="itemP">{item.name}</p>
+        </div>
+      </Row>
     </Container>
-  )
+  );
 }
 
-export default Items2
+export default Items2;

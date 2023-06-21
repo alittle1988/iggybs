@@ -3,7 +3,7 @@ import Items2 from "./Items2.js";
 import { Container } from "react-bootstrap";
 
 function ItemLists(props) {
-  const { products, category } = props;
+  const { products, category, showDetails, onHandleShowDetails } = props;
 
   return (
     <div>
@@ -12,7 +12,16 @@ function ItemLists(props) {
         <div className="itemdiv">
           {products.map((product, key) => {
             if (product.category.toLowerCase() === category.toLowerCase()) {
-              return <Items2 key={key} item={product} />;
+              return (
+                <Items2
+                  showDetails={showDetails}
+                  onHandleShowDetails={(product) =>
+                    onHandleShowDetails(product)
+                  }
+                  key={key}
+                  item={product}
+                />
+              );
             }
           })}
         </div>
