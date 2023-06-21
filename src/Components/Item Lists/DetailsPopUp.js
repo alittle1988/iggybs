@@ -11,7 +11,7 @@ function DetailsPopUp(props) {
         
         <Card.Body>
           <Card.Title>{details.name}</Card.Title>
-          <Card.Text style={{fontSize: "1.5vh"}}>{details.description}</Card.Text>
+          <Card.Text style={{fontSize: "1.5vh", overflow: "scroll"}}>{details.description}</Card.Text>
         </Card.Body>
         <ListGroup >
           <Card.Text className="cardText">Prices:</Card.Text>

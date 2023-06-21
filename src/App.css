@@ -144,7 +144,6 @@ html {
 .cardText {
   padding-left: 10px;
   margin-bottom: 0;
-  overflow: scroll;
 }
 
 .cardText1 {
@@ -153,3 +152,8 @@ html {
   font-size: 1.65vw;
 }
 
+@media screen and (orientation: landscape) {
+  .popUpCard {
+    overflow: scroll;
+  }
+}
