@@ -66,8 +66,9 @@ html {
 
 .itemdiv {
   display: flex;
-  overflow: scroll;
+  overflow-y: hidden;
   cursor: pointer;
+  padding: 0;
 }
 
 /* item section */
@@ -131,9 +132,11 @@ html {
 }
 
 .popUpCard {
-  width: 50%;
+  width: 65%;
   background-color: white;
   margin: 8px auto;
+  overflow-x: hidden;
+  border: 5px solid black;
   
 }
 
@@ -149,11 +152,14 @@ html {
 .cardText1 {
   padding-left: 15px;
   margin-bottom: 0;
-  font-size: 1.65vw;
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 500px) {
   .popUpCard {
-    overflow: scroll;
+    text-size-adjust: 80%;
+  }
+
+  .popUp-box {
+    max-height: 65%;
   }
 }

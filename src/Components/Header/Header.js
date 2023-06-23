@@ -23,7 +23,7 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className="me-3" id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Link onClick={moveToTop} className="navLink" to='/welcome'>Home</Link>
+              <Link onClick={moveToTop} className="navLink" to='/'>Home</Link>
               <Link onClick={moveToTop} className="navLink" to='/Family'>Family</Link>
               <NavDropdown className="navLink" title="Products" id="basic-nav-dropdown">
                 <NavDropdown.Item className="navLinkDropItem" href="#Cakes">Cakes</NavDropdown.Item>
@@ -44,8 +44,7 @@ const Header = () => {
         </Container>
       </Navbar>
       <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/welcome" element={<Welcome />} />
+        <Route path="/" element={<Welcome />} />    
         <Route path="/Family" element={<Family />} />
         
          

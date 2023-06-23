@@ -10,7 +10,7 @@ function Welcome() {
             Welcome to Iggy B's Bakery & Eats
           </h1>
         </Row>
-        <Row className="welcomeRow ms-4">
+        <Row className="welcomeRow m-4">
           <Col className="p-3 mt-4">
             <p className="text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
