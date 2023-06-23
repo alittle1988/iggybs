@@ -252,7 +252,7 @@ function App() {
       ],
     },
     {
-      category: "Hot Sauce",
+      category: "HotSauce",
       name: "Fuck YOu",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJtSmpwlulWLp_VNfOhcnLVFEhcjX8f4YmA&usqp=CAU",
       description: "Your mouth is going to dance",
@@ -272,7 +272,7 @@ function App() {
       ],
     },
     {
-      category: "Hot Sauce",
+      category: "HotSauce",
       name: "Fuck You two",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJtSmpwlulWLp_VNfOhcnLVFEhcjX8f4YmA&usqp=CAU",
       description: "Your mouth is going to dance",
@@ -292,7 +292,7 @@ function App() {
       ],
     },
     {
-      category: "Hot Sauce",
+      category: "HotSauce",
       name: "no more fucking",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJtSmpwlulWLp_VNfOhcnLVFEhcjX8f4YmA&usqp=CAU",
       description: "Your mouth is going to dance",
@@ -312,7 +312,7 @@ function App() {
       ],
     },
   ]);
-  const [categories, setCategories] = useState(["Cakes", "CakePops", "Cookies", "Bread",  "Hot Sauce"])
+  const [categories, setCategories] = useState(["Cakes", "CakePops", "Cookies", "Bread",  "HotSauce"])
   const [showDetails, setShowDetails] = useState(false);
   const [details, setDetails] = useState({});
 

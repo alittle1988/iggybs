@@ -35,7 +35,7 @@ const Header = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Item className="navLinkDropItem" href="#CakePops">Cake Pops</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item onClick={hotsauce} className="navLinkDropItem" href="#action/3.4">
+                <NavDropdown.Item onClick={hotsauce} className="navLinkDropItem" href="#HotSauce">
                   Hot Sauce
                 </NavDropdown.Item>
               </NavDropdown>
