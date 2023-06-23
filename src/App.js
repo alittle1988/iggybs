@@ -254,7 +254,7 @@ function App() {
     {
       category: "Hot Sauce",
       name: "Fuck YOu",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrJ7xOymtpieFRqnjkSAnXC9XL5zluYMputg&usqp=CAU",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJtSmpwlulWLp_VNfOhcnLVFEhcjX8f4YmA&usqp=CAU",
       description: "Your mouth is going to dance",
       sizeAvail: [
         {
@@ -274,7 +274,7 @@ function App() {
     {
       category: "Hot Sauce",
       name: "Fuck You two",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrJ7xOymtpieFRqnjkSAnXC9XL5zluYMputg&usqp=CAU",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJtSmpwlulWLp_VNfOhcnLVFEhcjX8f4YmA&usqp=CAU",
       description: "Your mouth is going to dance",
       sizeAvail: [
         {
@@ -294,7 +294,7 @@ function App() {
     {
       category: "Hot Sauce",
       name: "no more fucking",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrJ7xOymtpieFRqnjkSAnXC9XL5zluYMputg&usqp=CAU",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJtSmpwlulWLp_VNfOhcnLVFEhcjX8f4YmA&usqp=CAU",
       description: "Your mouth is going to dance",
       sizeAvail: [
         {
@@ -312,6 +312,7 @@ function App() {
       ],
     },
   ]);
+  const [categories, setCategories] = useState(["Cakes", "CakePops", "Cookies", "Bread",  "Hot Sauce"])
   const [showDetails, setShowDetails] = useState(false);
   const [details, setDetails] = useState({});
 
@@ -324,13 +325,16 @@ function App() {
       setShowDetails(true);
     }
   };
-
+  Object.keys(products).map(key => {
+    return console.log(products[key].category)
+  })
   return (
     <>
       <Container fluid className="App">
         <Header products={products} />
+        <hr></hr>
 
-        <h1 style={{ textAlign: "center", margin: "55px" }}>Products</h1>
+        <h1 style={{ textAlign: "center", marginTop: "100px" }}>Products</h1>
         {showDetails ? (
           <DetailsPopUp
             details={details}
@@ -339,30 +343,17 @@ function App() {
         ) : (
           ""
         )}
-        <ItemLists
-          showDetails={showDetails}
-          onHandleShowDetails={handleShowDetails}
-          category="Cakes"
-          products={products}
-        />
-        <ItemLists
-          showDetails={showDetails}
-          onHandleShowDetails={handleShowDetails}
-          category="CakePops"
-          products={products}
-        />
-        <ItemLists
-          showDetails={showDetails}
-          onHandleShowDetails={handleShowDetails}
-          category="Bread"
-          products={products}
-        />
-        <ItemLists
-          showDetails={showDetails}
-          onHandleShowDetails={handleShowDetails}
-          category="Cookies"
-          products={products}
-        />
+        {categories.map((category, key) => {
+            return (
+            <ItemLists showDetails={showDetails}
+            onHandleShowDetails={handleShowDetails}
+            category={category}
+            key={key}
+            products={products}
+           />)
+        })}
+
+        
       </Container>
     </>
   );

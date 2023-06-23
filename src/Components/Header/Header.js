@@ -19,7 +19,7 @@ const Header = () => {
     
       <Navbar className="header fixed-top" bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand className="ms-3"  href="#home"><h1>Iggy B's</h1><p>Bakery & Eats</p></Navbar.Brand>
+          <Link className="ms-3 brand" style={{color: "black"}} to="/"><h1>Iggy B's</h1><p>Bakery & Eats</p></Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className="me-3" id="basic-navbar-nav">
             <Nav className="ms-auto">

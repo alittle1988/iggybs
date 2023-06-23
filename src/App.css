@@ -13,6 +13,13 @@ html {
   z-index: 1;
 }
 
+.brand {
+  color: black;
+  text-decoration: none;
+}
+
+
+
 .navLink{
   font-size: 1.5rem  !important;
   margin: 5px;
@@ -37,11 +44,19 @@ html {
 
 /* Welcome sec */
 
+.welcome-container {
+  margin-bottom: 75px;
+}
+
 .welcome {
   margin-top: 112px;
 }
 .welcomeTitle {
   font-family: cursive;
+}
+
+.welcomeRow {
+  align-items: center;
 }
 
 .famPic{
