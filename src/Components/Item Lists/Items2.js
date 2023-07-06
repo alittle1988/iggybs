@@ -10,7 +10,7 @@ function Items2(props) {
   }
 
   return (
-    <Container>
+    <Container className="itemContainer">
       <Row>
         <div className="imgDiv" onClick={() => handleClick(item)}>
           <img className="itemimg" src={item.img} alt={item.name} />

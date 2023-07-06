@@ -3,7 +3,6 @@ import { Card } from "react-bootstrap";
 
 function DetailsPopUp(props) {
   const { details, onHandleShowDetails } = props;
- 
 
   return (
     <div onClick={onHandleShowDetails} className="popUp-box">
@@ -23,7 +22,9 @@ function DetailsPopUp(props) {
               <>
                 <Card.Text className="cardText1" key={key}>
                   <ul>
-                    <li>{detail.size}: ${detail.price}</li>
+                    <li>
+                      {detail.size}: ${detail.price}
+                    </li>
                   </ul>
                 </Card.Text>
               </>
@@ -31,7 +32,6 @@ function DetailsPopUp(props) {
           })}
         </Card.Body>
       </Card>
-      
     </div>
   );
 }

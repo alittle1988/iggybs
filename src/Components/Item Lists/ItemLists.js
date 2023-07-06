@@ -8,7 +8,15 @@ function ItemLists(props) {
   return (
     <div>
       <Container fluid id={category}>
-        <h1 style={{ margin: "45px 0px 45px 0px" }}>{category}</h1>
+        <h1
+          style={{
+            margin: "100px 0px 100px 0px",
+            textAlign: "center",
+            textDecoration: "underline",
+          }}
+        >
+          {category}
+        </h1>
         <div className="itemdiv">
           {products.map((product, key) => {
             if (product.category.toLowerCase() === category.toLowerCase()) {

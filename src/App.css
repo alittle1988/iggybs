@@ -8,9 +8,8 @@ html {
 .header {
   font-family: cursive;
   padding-left: 15px;
-  position: absolute;
-  top: 0;
-  z-index: 1;
+  position: fixed;
+  opacity: .9;
 }
 
 .brand {
@@ -101,6 +100,8 @@ html {
 
 }
 
+
+
 .imgDiv {
   text-align: center;
   width: 200px;
@@ -124,7 +125,7 @@ html {
 
 .popUp-box {
   position: fixed;
-  top: 17%;
+  top: 15%;
   left: 10%;
   display: inline-flex;
   justify-content: center;
@@ -147,7 +148,7 @@ html {
 }
 
 .popUpCard {
-  width: 65%;
+  width: 55%;
   background-color: white;
   margin: 8px auto;
   overflow-x: hidden;
@@ -177,4 +178,42 @@ html {
   .popUp-box {
     max-height: 65%;
   }
+}
+
+
+
+/* Order Form section */
+
+.ordersContainer {
+  margin-top: 115px;
+  
+}
+
+/* Footer Section */
+
+.footerContainer {
+  display: inline-flex;
+  justify-content: space-between;
+  background-color: rgb(240, 235, 235);
+  width: 100%;
+}
+
+.footerContainer h3 {
+  margin: auto 0;
+  padding-left: 15px;
+  font-family: cursive;
+}
+
+.footerUL {
+  padding-right: 15px;
+  margin: auto 0
+}
+
+.footerULitem {
+  list-style: none;
+  padding: 3px;
+}
+
+.footerULitem a {
+  color: black;
 }
