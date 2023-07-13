@@ -20,13 +20,11 @@ function DetailsPopUp(props) {
           {details.sizeAvail.map((detail, key) => {
             return (
               <>
-                <Card.Text className="cardText1" key={key}>
-                  <ul>
-                    <li>
-                      {detail.size}: ${detail.price}
-                    </li>
-                  </ul>
-                </Card.Text>
+                <ul>
+                  <li key={key}>
+                    {detail.size}: ${detail.price}
+                  </li>
+                </ul>
               </>
             );
           })}

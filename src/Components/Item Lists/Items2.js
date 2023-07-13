@@ -5,7 +5,7 @@ function Items2(props) {
   const { item, onHandleShowDetails } = props;
 
   function handleClick(detail) {
-    console.log(detail);
+    
     onHandleShowDetails(detail);
   }
 
