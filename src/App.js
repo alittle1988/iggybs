@@ -5,10 +5,12 @@ import Header from "./Components/Header/Header.js";
 import ItemLists from "./Components/Item Lists/ItemLists";
 import { useState } from "react";
 import DetailsPopUp from "./Components/Item Lists/DetailsPopUp";
-import Order from "./Components/Orders/Order";
 import Footer from "./Components/Footer";
 
+
+
 function App() {
+  
   const [products, setProducts] = useState([
     {
       category: "Cakes",
@@ -333,11 +335,13 @@ function App() {
     "Bread",
     "HotSauce",
   ]);
+  const [adminLogin, setAdminLogin] = useState({userName: 'andy', pass: 'login123'});
+  const [loggedIn, setLoggedIn] = useState(false)
   const [showDetails, setShowDetails] = useState(false);
   const [details, setDetails] = useState({});
 
   const handleShowDetails = (detail) => {
-    console.log(detail);
+    
     if (showDetails) {
       setShowDetails(false);
     } else {
@@ -346,12 +350,21 @@ function App() {
     }
   };
 
+
+  const handleLogin = (details) => {
+    if(details === adminLogin) {
+      setLoggedIn(true)
+    } else {
+      alert('You have entered incorrect credentials ')
+    }
+    console.log(loggedIn)
+  }
+
   return (
     <>
       <Container fluid className="App">
-        <Header products={products} />
+        <Header products={products} onHandleLogin={handleLogin} />
         <hr></hr>
-        
 
         <h1 style={{ paddingLeft: "25px", marginTop: "100px" }}>Products</h1>
         {showDetails ? (

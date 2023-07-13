@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import myImage from '../images/iggyBsFamilyPic.jpeg';
 
 function Welcome() {
   return (
@@ -35,7 +36,7 @@ function Welcome() {
           >
             <img
               className="famPic"
-              src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/348433940_6523598674317298_8900076896313790962_n.jpg?stp=cp6_dst-jpg_p526x296&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=3ZBEWlJMnd0AX-pmaHV&_nc_ht=scontent-lax3-2.xx&oh=00_AfADpu38WLYifOWokaQ1QxG79tOUfq9SMPcv_CdAimD3PQ&oe=649B10E2"
+              src={myImage}
               alt="Family"
             />
           </Col>

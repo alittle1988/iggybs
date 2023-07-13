@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container, Form, Row } from "react-bootstrap";
 
 function Order() {
+  const [message, setMessage] = useState("");
 
-  const onSubmit = () => {
-
+  function handleSubmit( message) {
+    
+    window.location = `mailto:andylittle88@gmail.com?subject=Order%20Details&body=${message}`;
   }
-
+  console.log(message);
   return (
     <div className="ordersDiv">
       <Container className="ordersContainer">
@@ -14,18 +16,26 @@ function Order() {
           <h1>Orders</h1>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="name@example.com" />
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" placeholder="Name" />
             </Form.Group>
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
               <Form.Label>Order Details</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Control
+                as="textarea"
+                rows={3}
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
+              />
             </Form.Group>
-            <Button >Submit</Button>
           </Form>
+          <Button onClick={e => handleSubmit(message)} style={{ width: "100px" }}>
+            Submit
+          </Button>
         </Row>
       </Container>
     </div>

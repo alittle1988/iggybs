@@ -39,6 +39,30 @@ html {
   width: 100%;
 }
 
+.adminLink {
+  text-decoration: none;
+  position: fixed;
+  top: 0;
+  right: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Admin Page section */
+
+.adminLogin {
+  margin-top: 115px;
+}
+
+.adminDiv {
+  margin-top: 115px;
+}
+
+.adminList {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
 
 
 /* Welcome sec */
