@@ -335,8 +335,6 @@ function App() {
     "Bread",
     "HotSauce",
   ]);
-  const [adminLogin, setAdminLogin] = useState({userName: 'andy', pass: 'login123'});
-  const [loggedIn, setLoggedIn] = useState(false)
   const [showDetails, setShowDetails] = useState(false);
   const [details, setDetails] = useState({});
 
@@ -351,19 +349,11 @@ function App() {
   };
 
 
-  const handleLogin = (details) => {
-    if(details === adminLogin) {
-      setLoggedIn(true)
-    } else {
-      alert('You have entered incorrect credentials ')
-    }
-    console.log(loggedIn)
-  }
 
   return (
     <>
       <Container fluid className="App">
-        <Header products={products} onHandleLogin={handleLogin} />
+        <Header products={products}  />
         <hr></hr>
 
         <h1 style={{ paddingLeft: "25px", marginTop: "100px" }}>Products</h1>
