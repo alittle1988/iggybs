@@ -3,10 +3,11 @@ import { Button, Container, Form, Row } from "react-bootstrap";
 
 function Order() {
   const [message, setMessage] = useState("");
+  const [name, setName] = useState('');
 
   function handleSubmit( message) {
     
-    window.location = `mailto:andylittle88@gmail.com?subject=Order%20Details&body=${message}`;
+    window.location = `mailto:andylittle88@gmail.com?subject=Order%20Details%20For%20${name}&body=${message}`;
   }
   console.log(message);
   return (
@@ -17,7 +18,7 @@ function Order() {
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Name" />
+              <Form.Control onChange={e => setName(e.target.value)} type="text" placeholder="Name" />
             </Form.Group>
             <Form.Group
               className="mb-3"
