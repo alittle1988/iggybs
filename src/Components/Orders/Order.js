@@ -9,7 +9,7 @@ function Order() {
     
     window.location = `mailto:andylittle88@gmail.com?subject=Order%20Details%20For%20${name}&body=${message}`;
   }
-  console.log(message);
+  
   return (
     <div className="ordersDiv">
       <Container className="ordersContainer">
