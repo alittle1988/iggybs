@@ -12,6 +12,7 @@ html {
   opacity: .9;
 }
 
+
 .brand {
   color: black;
   text-decoration: none;
@@ -90,7 +91,7 @@ html {
 
 /* Family Section */
 
-.family {
+.familyContainer {
 
   margin-top: 112px;
 }
@@ -98,6 +99,24 @@ html {
 .familyTitle {
   margin-top: 20px;
   text-align: center;
+  font-family: cursive;
+}
+
+.family {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+/* Family Meb Section */
+
+.familyMeb {
+  text-align: center;
+}
+.familyMeb img {
+  width: 18rem;
+  border-radius: 50px;
+  margin: 50px 0;
+  border: 1px solid black;
 }
 
 /* Item List */
@@ -209,8 +228,12 @@ html {
 /* Order Form section */
 
 .ordersContainer {
-  margin-top: 115px;
+  margin-top: 135px;
   
+}
+
+.ordersDiv {
+  margin-bottom: 65px ;
 }
 
 /* Footer Section */
@@ -220,6 +243,9 @@ html {
   justify-content: space-between;
   background-color: rgb(240, 235, 235);
   width: 100%;
+  border-top: 1px solid black;
+  
+
 }
 
 .footerContainer h3 {

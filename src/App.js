@@ -6,6 +6,11 @@ import ItemLists from "./Components/Item Lists/ItemLists";
 import { useState } from "react";
 import DetailsPopUp from "./Components/Item Lists/DetailsPopUp";
 import Footer from "./Components/Footer";
+import { Route, Routes } from "react-router-dom";
+import Welcome from "./Components/Welcome";
+import Family from "./Components/Family";
+import Order from "./Components/Orders/Order";
+import Gallery from "./Components/Gallery";
 
 
 
@@ -353,32 +358,23 @@ function App() {
   return (
     <>
       <Container fluid className="App">
-        <Header products={products}  />
-        <hr></hr>
-
-        <h1 style={{ paddingLeft: "25px", marginTop: "100px" }}>Products</h1>
-        {showDetails ? (
-          <DetailsPopUp
-            details={details}
-            onHandleShowDetails={handleShowDetails}
-          />
-        ) : (
-          ""
-        )}
-        {categories.map((category, key) => {
-          return (
-            <ItemLists
-              showDetails={showDetails}
-              onHandleShowDetails={handleShowDetails}
-              category={category}
-              key={key}
-              products={products}
-            />
-          );
-        })}
+        <Header products={products} details={details} onHandleShowDetails={handleShowDetails} categories={categories} showDetails={showDetails} />
         
-      </Container>
+        
+      
+      
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/Family" element={<Family />} />
+        <Route path="Orders" element={<Order />} />
+        <Route path="Gallery" element={<Gallery products={products} details={details} showDetails={showDetails} categories={categories} onHandleShowDetails={handleShowDetails} />} />
+        
+        
+      </Routes>
+      <hr></hr>
+      <Gallery products={products} details={details} showDetails={showDetails} categories={categories} onHandleShowDetails={handleShowDetails} />
       <Footer></Footer>
+      </Container>
     </>
   );
 }

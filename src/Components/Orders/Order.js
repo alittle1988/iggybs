@@ -14,7 +14,7 @@ function Order() {
     <div className="ordersDiv">
       <Container className="ordersContainer">
         <Row>
-          <h1>Orders</h1>
+          <h1 style={{fontFamily: 'cursive'}}>Orders</h1>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Name</Form.Label>
@@ -27,7 +27,7 @@ function Order() {
               <Form.Label>Order Details</Form.Label>
               <Form.Control
                 as="textarea"
-                rows={3}
+                rows={12}
                 onChange={(e) => {
                   setMessage(e.target.value);
                 }}
