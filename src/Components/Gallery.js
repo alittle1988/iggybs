@@ -3,7 +3,7 @@ import DetailsPopUp from "./Item Lists/DetailsPopUp";
 import ItemLists from "./Item Lists/ItemLists";
 
 function Gallery(props) {
-  const { products, showDetails, details, onHandleShowDetails, categories } =
+  const { products, showDetails, details, onHandleShowDetails, categories, onHandleAddToCart } =
     props;
   return (
     <div>
@@ -20,6 +20,7 @@ function Gallery(props) {
         <DetailsPopUp
           details={details}
           onHandleShowDetails={onHandleShowDetails}
+          onHandleAddToCart={onHandleAddToCart}
         />
       ) : (
         ""

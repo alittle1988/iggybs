@@ -1,8 +1,12 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 function DetailsPopUp(props) {
-  const { details, onHandleShowDetails } = props;
+  const { details, onHandleShowDetails, onHandleAddToCart } = props;
+
+  function addToCart() {
+    onHandleAddToCart(details)
+  }
 
   return (
     <div onClick={onHandleShowDetails} className="popUp-box">
@@ -15,20 +19,21 @@ function DetailsPopUp(props) {
             {details.description}
           </Card.Text>
           <hr></hr>
-          <Card.Text className="cardText">Prices:</Card.Text>
-
-          {details.sizeAvail.map((detail, key) => {
+          <Card.Text className="cardText">Prices: ${details.price}</Card.Text>
+          {/* code for diffrent sizes*/}
+          {/*{details.sizeAvail.map((detail, key) => {
             return (
-              <>
-                <ul>
-                  <li key={key}>
+              
+                <ul key={key}>
+                  <li >
                     {detail.size}: ${detail.price}
                   </li>
                 </ul>
-              </>
+              
             );
-          })}
+          })}*/}
         </Card.Body>
+        <Button onClick={addToCart}  style={{margin: '5px'}}>Add to Cart</Button>
       </Card>
     </div>
   );
