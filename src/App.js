@@ -11,11 +11,9 @@ import Welcome from "./Components/Welcome";
 import Family from "./Components/Family";
 import Order from "./Components/Orders/Order";
 import Gallery from "./Components/Gallery";
-
-
+import Cart from "./Components/Cart";
 
 function App() {
-  
   const [products, setProducts] = useState([
     {
       category: "Cakes",
@@ -342,9 +340,11 @@ function App() {
   ]);
   const [showDetails, setShowDetails] = useState(false);
   const [details, setDetails] = useState({});
+  const [cart, setCart] = useState([])
+
+  
 
   const handleShowDetails = (detail) => {
-    
     if (showDetails) {
       setShowDetails(false);
     } else {
@@ -353,27 +353,32 @@ function App() {
     }
   };
 
-
-
   return (
     <>
       <Container fluid className="App">
-        <Header products={products} details={details} onHandleShowDetails={handleShowDetails} categories={categories} showDetails={showDetails} />
-        
-        
-      
-      
-      <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/Family" element={<Family />} />
-        <Route path="Orders" element={<Order />} />
-        <Route path="Gallery" element={<Gallery products={products} details={details} showDetails={showDetails} categories={categories} onHandleShowDetails={handleShowDetails} />} />
-        
-        
-      </Routes>
-      <hr></hr>
-      <Gallery products={products} details={details} showDetails={showDetails} categories={categories} onHandleShowDetails={handleShowDetails} />
-      <Footer></Footer>
+        <Header
+          products={products}
+          details={details}
+          onHandleShowDetails={handleShowDetails}
+          categories={categories}
+          showDetails={showDetails}
+        />
+
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/Family" element={<Family />} />
+          <Route path="Orders" element={<Order />} />
+          <Route path="Cart" element={<Cart products={products} />} />
+        </Routes>
+        <hr></hr>
+        <Gallery
+          products={products}
+          details={details}
+          showDetails={showDetails}
+          categories={categories}
+          onHandleShowDetails={handleShowDetails}
+        />
+        <Footer></Footer>
       </Container>
     </>
   );

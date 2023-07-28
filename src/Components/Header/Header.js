@@ -14,9 +14,7 @@ const Header = (props) => {
     window.scrollTo(0, 0);
   }
 
-  function hotsauce() {
-    alert("Hot sauce so hot it will make your butthole swell!");
-  }
+  
 
   return (
     <>
@@ -33,10 +31,10 @@ const Header = (props) => {
               <Link onClick={moveToTop} className="navLink" to="/Family">
                 Family
               </Link>
-              <Link onClick={moveToTop}  className='navLink' to="/Gallery">Gallery</Link>
               <Link onClick={moveToTop} className="navLink" to="/Orders">
-                Orders
+                Contact
               </Link>
+              <Link onClick={moveToTop} className="navLink" to="/Cart" >Cart</Link>
               
             </Nav>
           </Navbar.Collapse>

@@ -19,6 +19,16 @@ function ItemLists(props) {
         </h1>
         <div className="itemdiv">
           {products.map((product, key) => {
+            if (category === 'AllProducts') {
+             return <Items2
+              showDetails={showDetails}
+              onHandleShowDetails={(product) => 
+                onHandleShowDetails(product)
+              }
+              key={key}
+              item={product
+              }/>
+            } else {
             if (product.category.toLowerCase() === category.toLowerCase()) {
               return (
                 <Items2
@@ -30,7 +40,7 @@ function ItemLists(props) {
                   item={product}
                 />
               );
-            }
+            }}
           })}
         </div>
       </Container>
