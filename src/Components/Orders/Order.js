@@ -14,7 +14,7 @@ function Order() {
     <div className="ordersDiv">
       <Container className="ordersContainer">
         <Row>
-          <h1 style={{fontFamily: 'cursive'}}>Orders</h1>
+          <h1 style={{fontFamily: 'cursive'}}>Contact</h1>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Name</Form.Label>
@@ -24,7 +24,7 @@ function Order() {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label>Order Details</Form.Label>
+              <Form.Label>Details:</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={12}
