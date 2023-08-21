@@ -13,6 +13,7 @@ function ItemLists(props) {
             margin: "100px 0px 100px 0px",
             textAlign: "center",
             textDecoration: "underline",
+            fontFamily: 'cursive'
           }}
         >
           {category}

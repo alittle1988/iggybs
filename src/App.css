@@ -102,28 +102,38 @@ html {
   font-family: cursive;
 }
 
-.family {
-  display: inline-flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+
 
 .familyRow {
   display: inline-flex;
   justify-content: center;
   flex-wrap: wrap;
+  text-align: center;
+}
+
+@media  screen and (max-width: 770px) {
+  .familyMeb {
+    width: 100%;
+  }
 }
 
 /* Family Meb Section */
 
 .familyMeb {
   text-align: center;
+
 }
 .familyMeb img {
   width: 18rem;
   border-radius: 50px;
-  margin: 50px 0;
+  margin: 50px auto;
   border: 1px solid black;
+}
+
+.mebCol {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Cart Section */
@@ -164,6 +174,7 @@ html {
   overflow-y: hidden;
   cursor: pointer;
   padding: 0;
+  
 }
 
 /* item section */
@@ -259,6 +270,7 @@ html {
   .popUp-box {
     max-height: 65%;
   }
+
 }
 
 
