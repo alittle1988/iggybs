@@ -28,7 +28,7 @@ function Family() {
     <div className='familyContainer'>
         <h1 className='familyTitle pt-5'>The Family</h1>
         <Container className='family'>
-          <Row >
+          <Row className='familyRow'>
           <FamilyMeb name={theChef.name} about={theChef.about} img={theChef.img} />
           <FamilyMeb name={theBaker.name} about={theBaker.about} img={theBaker.img} />
           <FamilyMeb name={theMa.name} about={theMa.about} img={theMa.img} />

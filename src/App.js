@@ -354,6 +354,7 @@ function App() {
   const [details, setDetails] = useState({});
   const [cartList, setCartList] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
+  const [welcome, setWelcome] = useState(true)
 
   // handles toggle showing popup
   const handleShowDetails = (detail) => {
@@ -365,12 +366,36 @@ function App() {
     }
   };
 
+  // handle welcome toggle
+  function handleWelcome() {
+    setWelcome(false)
+  }
+
+  function handleWelcomeHome() {
+    setWelcome(true)
+  }
+
   // handles adding item to cart
 
   function handleAddToCart(detail) {
     setCartList([...cartList, detail]);
     addTotal(detail);
   }
+
+  // handle removing item    from cart
+
+  function handleRemoveFromCart(key) {
+    let newArr = cartList;
+    newArr.splice(key, 1)
+    setCartList([...newArr])
+    let total = 0;
+    for (let i =0; i<cartList.length;i++) {
+      total = total + cartList[i].price;
+    }
+    setCartTotal(total)
+    
+  }
+  
 
   function addTotal(par) {
     let total = 0;
@@ -379,6 +404,7 @@ function App() {
     }
     setCartTotal(total + par.price);
   }
+  console.log(welcome)
 
   return (
     <>
@@ -390,15 +416,18 @@ function App() {
           categories={categories}
           showDetails={showDetails}
           cartList={cartList}
+          onHandleWelcome={handleWelcome}
+          onHandleWelcomeHome={handleWelcomeHome}
         />
-
+        {welcome ? <Welcome /> : <div></div>}
         <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/Family" element={<Family />} />
-          <Route path="Orders" element={<Order />} />
+          <Route path="/" />
+          <Route  path="/Family" element={<Family />} />
+          <Route  path="Orders" element={<Order />} />
           <Route
+          
             path="Cart"
-            element={<Cart cartList={cartList} cartTotal={cartTotal} />}
+            element={<Cart cartList={cartList} cartTotal={cartTotal} onHandleRemoveFromCart= {handleRemoveFromCart} />}
           />
         </Routes>
         <hr></hr>

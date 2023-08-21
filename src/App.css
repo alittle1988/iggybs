@@ -92,7 +92,7 @@ html {
 /* Family Section */
 
 .familyContainer {
-
+ 
   margin-top: 112px;
 }
 
@@ -104,6 +104,13 @@ html {
 
 .family {
   display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.familyRow {
+  display: inline-flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -132,6 +139,22 @@ html {
 .cartCard {
   width: 200px;
   
+}
+
+.cartImg {
+  width: 100%;
+  height: 198px;
+}
+
+.cartTotalRow {
+  display: inline-flex;
+  justify-content: space-between;
+  
+}
+
+.cartButton {
+  width: 150px;
+ 
 }
 
 /* Item List */

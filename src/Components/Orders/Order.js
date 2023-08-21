@@ -7,7 +7,7 @@ function Order() {
 
   function handleSubmit( message) {
     
-    window.location = `mailto:andylittle88@gmail.com?subject=Order%20Details%20For%20${name}&body=${message}`;
+    window.location = `mailto:andylittle88@gmail.com?subject=Special%20Inquiry%20For%20${name}&body=${message}`;
   }
   
   return (
