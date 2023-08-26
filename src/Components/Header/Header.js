@@ -9,8 +9,13 @@ import Gallery from '../Gallery'
 
 
 const Header = (props) => {
-  const {products, details, showDetails, categories, onHandleShowDetails} = props;
+  const {onToggleWelcomeOn, onToggleWelcomeOff} = props;
   function moveToTop() {
+    window.scrollTo(0, 0);
+    onToggleWelcomeOff()
+  }
+
+  function moveToTopHome() {
     window.scrollTo(0, 0);
   }
 
@@ -27,14 +32,14 @@ const Header = (props) => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className="me-3" id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Link onClick={moveToTop} className="navLink" to="/">Home</Link>
+              <Link onClick={moveToTopHome} className="navLink" to="/">Home</Link>
               <Link onClick={moveToTop} className="navLink" to="/Family">
                 Family
               </Link>
               <Link onClick={moveToTop} className="navLink" to="/Orders">
                 Contact
               </Link>
-              <Link onClick={moveToTop} className="navLink" to="/Cart" >Cart</Link>
+              
               
             </Nav>
           </Navbar.Collapse>

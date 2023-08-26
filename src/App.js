@@ -341,6 +341,7 @@ function App() {
   const [showDetails, setShowDetails] = useState(false);
   const [details, setDetails] = useState({});
   const [cart, setCart] = useState([])
+  const [toggleWelcome, setToggleWelcome] = useState(true)
 
   
 
@@ -353,6 +354,15 @@ function App() {
     }
   };
 
+  function toggleWelcomeOff() {
+    setToggleWelcome(false)
+  }
+
+  function toggleWelcomeOn() {
+    setToggleWelcome(true)
+  }
+
+
   return (
     <>
       <Container fluid className="App">
@@ -362,10 +372,12 @@ function App() {
           onHandleShowDetails={handleShowDetails}
           categories={categories}
           showDetails={showDetails}
+          onToggleWelcomeOn={toggleWelcomeOn}
+          onToggleWelcomeOff={toggleWelcomeOff}
         />
-
+        {toggleWelcome ? <Welcome /> : <div></div>}
         <Routes>
-          <Route path="/" element={<Welcome />} />
+          <Route path="/"  />
           <Route path="/Family" element={<Family />} />
           <Route path="Orders" element={<Order />} />
           <Route path="Cart" element={<Cart products={products} />} />
