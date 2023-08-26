@@ -35,6 +35,10 @@ function Cart(props) {
         <h1>Cart</h1>
       </Row>
       <Row>
+        <h5 style={{color: 'red'}}>Disclamer:</h5>
+        <p style={{color: 'red', fontFamily: 'cursive'}}>Items Can take 3-5 buisness days for prepertion and fulfillent of order. Large Quantities may take longer depending on order. </p>
+      </Row>
+      <Row>
         <h3>Items:</h3>
       </Row>
       <Row style={{flexWrap: 'nowrap', overflow: 'scroll'}}>

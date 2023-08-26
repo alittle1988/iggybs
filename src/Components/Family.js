@@ -29,16 +29,16 @@ function Family() {
         <h1 className='familyTitle pt-5'>The Family</h1>
         <Container className='family'>
           <Row className='familyRow'>
-            <Col className='mebCol'>
+            <Col className='mebCol' md={6}>
           <FamilyMeb name={theChef.name} about={theChef.about} img={theChef.img} />
           </Col>
-          <Col className='mebCol'>
+          <Col className='mebCol' md={6}>
           <FamilyMeb name={theBaker.name} about={theBaker.about} img={theBaker.img} />
           </Col>
-          <Col className='mebCol'>
+          <Col className='mebCol' md={6}>
           <FamilyMeb name={theMa.name} about={theMa.about} img={theMa.img} />
           </Col>
-          <Col className='mebCol'>
+          <Col className='mebCol' md={6}>
           <FamilyMeb name={theBoy.name} about={theBoy.about} img={theBoy.img} />
           </Col>
           </Row>

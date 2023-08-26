@@ -12,7 +12,7 @@ function DetailsPopUp(props) {
     <div onClick={onHandleShowDetails} className="popUp-box">
       <Card className="popUpCard" onClick={onHandleShowDetails}>
         <Card.Img className="popUpImg" src={details.img} alt={details.name} />
-
+        
         <Card.Body>
           <Card.Title>{details.name}</Card.Title>
           <Card.Text style={{ fontSize: "1.5vh" }}>
