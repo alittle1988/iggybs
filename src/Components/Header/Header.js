@@ -17,6 +17,7 @@ const Header = (props) => {
 
   function moveToTopHome() {
     window.scrollTo(0, 0);
+    onToggleWelcomeOn()
   }
 
   
